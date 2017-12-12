@@ -1,0 +1,41 @@
+#body{
+    background: url(../img/img-bg.jpg) center top no-repeat;
+    overflow: hidden;
+    text-align: center;
+    height: 975px;
+}
+.neirong{
+	width: 550px;
+    margin: 652px auto 0px auto;
+    color: #b9c0d3;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+}
+.time{
+	color: #2dc4fa;
+    font-size: 24px;
+    text-align: center;
+    margin: 50px 0;
+}
+.bnt{
+	display: inline-block;
+    width: 344px;
+    height: 59px;
+    background: url(../img/btnbg.png) no-repeat;
+    background-position: center -60px;
+    color: #f3fefb;
+    font-size: 18px;
+    line-height: 59px;
+    margin: 2px auto 5px;
+    letter-spacing: 4px;
+    cursor: pointer;
+    text-shadow: 1px 1px 1px #000;
+    font-family: 'Microsoft YaHei';
+}
+.bnt:hover{background-position: center 0px;}
+.shuoming{
+	color: #434b4e;
+    text-align: center;
+    font-size: 16px;
+}

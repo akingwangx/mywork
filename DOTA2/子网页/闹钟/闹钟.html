@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>小闹钟</title>
+		<meta name="copyright" content="网站版权" />
+		<meta name="keywords" content="网站关键字" />
+		<meta name="description" content="网站描述" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style type="text/css">
+		*{margin: 0px;padding: 0px;}
+			.naozhong_box{
+				border-radius: 40%;
+				background: #59BBFF;
+				width: 390px;
+				height: 165px;
+				padding: 40px;
+				overflow: hidden;
+				text-align: center;
+				font-family: "楷体";
+			}
+			.naozhong_box input{				
+				width: 30px;
+				height: 20px;
+			}
+			.shurukuang{
+				width: 390px;
+				height: 27px;
+				font-size: 20px;
+			}
+			#naozhong button{
+				color:darkblue;
+				padding: 5px 20px;
+				width: 150px;
+				height: 40px;
+				margin: 10px;
+				font-size: 18px;
+			}
+			.biaoti{font-size: 16px;margin: 5px;}
+			#shuchu{color: #981B07;font-size: 20px;}
+			#daoshu{color: #000000;font-family: "微软雅黑";display: inline-block;margin: 7px;}
+			#body img{
+				position: fixed;
+				top: -150px;
+				left: -100px;
+			}
+		</style>
+	</head>
+	<body id="body">
+		<div class="naozhong_box">		
+			<div id="naozhong">
+				<p class="biaoti">请输入时间:</p>
+				<p class="shurukuang">
+					<input id="nian"/>年			
+					<input id="yue"/>月
+					<input id="ri"/>日
+					<input id="shi"/>时
+					<input id="fen"/>分
+					<input id="miao"/>秒
+				</p>				
+				<button onclick="shijiandediaoyong()">设置闹钟</button>
+				<p id="shuchu"></p>
+				<span id="daoshu"></span>			
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	function shijiandediaoyong() {
+		if ($("nian").value != '' && $("yue").value != '' && $("ri").value != '' && $("shi").value != '' && $("fen").value != '') {
+			if (!isNaN($("nian").value) && !isNaN($("yue").value) && !isNaN($("ri").value) && !isNaN($("shi").value) && !isNaN($("fen").value) && !isNaN($("miao").value)) {
+				var ts = (new Date($("nian").value, $("yue").value - 1, $("ri").value, $("shi").value, $("fen").value, $("miao").value)) - (new Date()); //计算剩余的毫秒数 
+				var dd = parseInt(ts / 1000 / 60 / 60 / 24, 10); //计算剩余的天数  
+				var hh = parseInt(ts / 1000 / 60 / 60 % 24, 10); //计算剩余的小时数  
+				var mm = parseInt(ts / 1000 / 60 % 60, 10); //计算剩余的分钟数  
+				var ss = parseInt(ts / 1000 % 60, 10); //计算剩余的秒数
+				$("shuchu").innerHTML = '剩余时间:';
+				$("daoshu").innerHTML = dd + "天" + hh + "时" + mm + "分" + ss + "秒";
+				$time = setTimeout(shijiandediaoyong, 1000);
+				if (dd == 0 && hh == 0 && mm == 0 && ss == 0) {
+					clearTimeout($time);
+					$("shuchu").innerHTML = '';
+					$("daoshu").innerHTML = '';
+//					时间到
+					$("body").innerHTML='<img src="img/公鸡.gif" width="100%"/>';
+				}
+			} else {
+				alert('请输入正确的时间')
+			}
+		} else {
+			alert('请输入完整的时间')
+		}
+	}
+	function $(obj) {
+		return document.getElementById(obj);
+	}
+</script>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title">首页</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell" id="reset_launch">
+					<a class="mui-navigate-right">重置首次打开app</a>
+				</li>
+			</ul>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function() {
+				/**
+				 * 手动关闭启动界面
+				 */
+				plus.navigator.closeSplashscreen();
+				/**
+				 * 获取当前窗口对象，并取我们之前传过来的标识；
+				 */
+				var self = plus.webview.currentWebview();
+				var mark = self.mark;
+				/**
+				 * 自动消失提示，位置为top；
+				 * http://www.html5plus.org/doc/zh_cn/nativeui.html#plus.nativeUI.ToastOption
+				 */
+				plus.nativeUI.toast("我是从" + mark + "页面进来的", {
+					verticalAlign: "top"
+				});
+				document.getElementById("reset_launch").addEventListener("tap", function() {
+					/**
+					 * 系统确认对话框
+					 * http://www.html5plus.org/doc/zh_cn/nativeui.html#plus.nativeUI.confirm
+					 */
+					plus.nativeUI.confirm("是否重置首次打开app？", function(event) {
+						/**
+						 * 按钮的索引，从0开始；
+						 */
+						var index = event.index;
+						if(index == 0) {
+							/**
+							 * 通过key值删除键值对存储的数据
+							 * http://www.html5plus.org/doc/zh_cn/storage.html#plus.storage.removeItem
+							 */
+							plus.storage.removeItem("launchFlag");
+							/**
+							 * 自动消失提示，位置为center；
+							 * http://www.html5plus.org/doc/zh_cn/nativeui.html#plus.nativeUI.ToastOption
+							 */
+							plus.nativeUI.toast("重置成功，2秒后重启app。", {
+								verticalAlign: "center"
+							});
+							/**
+							 * 2秒后重启应用
+							 * http://www.html5plus.org/doc/zh_cn/runtime.html#plus.runtime.restart
+							 */
+							setTimeout(function() {
+								plus.runtime.restart();
+							}, 2000);
+						}
+					}, "重置启动", ["重置", "放弃"]);
+				});
+			});
+			/**
+			 * 重写mui.back()，一秒内连续点击两次，退出应用，仅安卓有效；
+			 */
+			var first = null;
+			mui.back = function() {
+				if(!first) {
+					first = new Date().getTime();
+					/**
+					 * 自动消失提示信息
+					 * http://www.html5plus.org/doc/zh_cn/nativeui.html#plus.nativeUI.toast
+					 */
+					plus.nativeUI.toast("再按一次退出应用");
+					setTimeout(function() {
+						first = null;
+					}, 1000);
+				} else {
+					if(new Date().getTime() - first < 1000) {
+						/**
+						 * 退出应用，仅安卓有效；
+						 * http://www.html5plus.org/doc/zh_cn/runtime.html#plus.runtime.quit
+						 */
+						plus.runtime.quit();
+					}
+				}
+			};
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,170 @@
+*{
+	margin: 0;
+	padding: 0;	
+}
+
+
+header{
+	margin-top: 13px;
+	margin-left: -5px;
+}
+header a,header a span{
+	font-size: 16px;
+	color: #ffffff;
+	
+}
+.bgimg img{
+	 
+    filter: blur(4px);  
+    /*filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false);*/
+    width: 100%;
+    height: 280px;
+    position: relative;
+    
+}
+.touxiang img{
+	width: 85px;
+	height: 85px;
+	position: absolute;
+	border: 2px solid #ffffff;
+	border-radius: 50%;
+	top: 57px;
+	left:40%;
+}
+.sm-img img:first-child{
+	width: 27px;
+	position: absolute;
+	top:90px;
+	left: 30%;
+	
+}
+#img1{
+	width: 27px;
+	position: absolute;
+	top:90px;
+	left: 64%;
+	display: block;
+
+}
+#img2{
+	width: 27px;
+	position: absolute;
+	top:90px;
+	left: 64%;
+	display: none;
+
+}
+
+.na-span{
+	position: absolute;
+	top: 153px;
+    left: 23.5%;
+    text-align: center;
+}
+.na-span p{
+	color: #FFFFff;
+	font-size: 16px;
+	font-weight: 700;
+	
+}
+.na-span span{
+	font-size: 13px;
+	color: #F3F3F3;
+	
+}
+.list-thr{
+	position: absolute;
+    top: 225px;
+}
+.list-thr ul{
+	list-style: none;
+}
+.list-thr li{
+	display: block;
+	float:left;
+	width: 110px;
+	height: 45px;
+	border-right:1px solid #c0c0c0;
+	text-align: center;
+	margin-left: 12px;
+	
+}
+.list-thr li:last-child{
+	border: none;
+}
+.list-thr li p{
+	color: #fff;
+	font-weight: 700;
+}
+.list-thr li span{
+	color: #fff;
+	font-size: 14px;
+}
+.photo ul{
+    width:100%;
+	padding: 10px;
+	list-style: none;
+	
+}
+.photo li img{
+	margin-top: 10px;
+	margin-left: 5px;
+	border: 2px solid #ffffff;
+	position: relative;
+	
+	float: left;
+}
+.li1 img{
+	width: 58%;
+	
+}
+.li3 img{
+	width: 38%;
+}
+.li6 img{
+	width: 58%;
+	top: -43px;
+	
+}
+.li7 img{
+	width: 38%;
+	height: 205px;
+}
+.li5 img{
+	width: 98%;
+	top: -48px;
+}
+.li2 img{
+	width: 50%;
+}
+.li8 img{
+	width: 48%;
+	top: -52px;
+}
+.li9 img{
+	width: 48%;
+	height: 255px;
+	top:-53px
+}
+.li2 img{
+	width: 100%;
+	top: -60px;
+}
+.li4 img{
+	width: 100%;
+	top: -68px;
+
+}
+#start{
+	width: 100px;
+	height: 40px;
+	position: absolute;
+	top: 590px;
+	background-color: saddlebrown;
+	border:1px solid saddlebrown;
+	font-size: 15px;
+	letter-spacing: 2px;
+	
+	color: #fff;
+}
+

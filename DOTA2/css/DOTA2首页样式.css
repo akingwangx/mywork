@@ -1,0 +1,690 @@
+/*网页头部为一张背景，导航栏为一个DIV块*/
+.wrap{
+	position: relative;
+    width: 100%;
+    min-width: 1100px;
+    height: 2620px;
+    background: url(../img/bodygtound.jpg) center 842px no-repeat #45555a;
+    overflow: hidden;	
+}
+#webhead{
+    position: relative;
+	width: 1920px;
+    height: 842px;
+    margin: 0px auto;
+    overflow: hidden;
+}
+#img_box{
+	width: 1920px;
+    height: 842px;
+	border: 1px solid #999999;
+	position:absolute;
+	top:0px;
+	left:-14%;
+	overflow: hidden;
+}	
+#imgs{
+	transition: 1s;
+	width:400%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}		
+#imgs img {
+    width: 1920px;
+   	height: 842px;
+   	float: left;
+}
+#webhead a{
+	position: absolute;
+    width: 100%;
+    height: 300px;
+    left: 0px;
+    top: 220px;
+    overflow: hidden;
+    z-index: 9;
+}
+.ulanniu{
+    position: absolute;
+    height: 29px;
+    right: 26%;
+    top: 650px;
+    z-index: 10;
+    overflow: hidden;
+}
+.ulanniu li{
+    float: left;
+    width: 29px;
+    height: 29px;
+    padding-left: 10px;
+    background: url(../img/lunbo_icon.png) no-repeat 0px 0px;
+    text-align: center;
+    overflow: hidden;
+}
+.ulanniu>li:hover{cursor: pointer;}
+/*导航栏*/
+.nav{
+	position: absolute;
+    width: 1100px;
+    height: 140px;
+    top: 30px;
+    left: 50%;
+    margin-left: -550px;
+    z-index: 10;
+}
+.nav>div{
+	position: absolute;
+    width: 95px;
+    top: 0;
+    text-align: center;
+}
+.top_nav1,.top_nav2,.top_nav3,.top_nav4,.top_nav5,.top_nav6{
+    display: block;
+    width: 95px;
+    height: 49px;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+.nav div p{
+    padding-top: 15px;
+}
+.nav1{left: 0px;}
+.nav2{left: 143px;}
+.nav3{left: 291px;}
+.nav4{left: 706px;}
+.nav5{left: 856px;}
+.nav6{left: 1004px;}
+.top_nav1{
+    background-image:url(../img/导航栏文字1.png);
+}
+.top_nav2{
+    background-image:url(../img/导航栏文字2.png);
+}
+.top_nav3{
+    background-image:url(../img/导航栏文字3.png);
+}
+.top_nav4{
+    background-image:url(../img/导航栏文字4.png);
+}
+.top_nav5{
+    background-image:url(../img/导航栏文字5.png);
+}
+.top_nav6{
+    background-image:url(../img/导航栏文字6.png);
+}
+.nav div p a{
+    display: block;
+    width: 95px;
+    height: 24px;
+    font: normal 12px "微软雅黑";
+    color: #bfbfbb;
+}
+.nav div p a:hover{
+	color: #ed3f02;
+}
+.DOTA2toplogo{
+    position: absolute;
+    width: 150px;
+    height: 131px;
+    left: 462px;
+    top: 0px;
+    background-image: url(../img/DOTA2logo.png);
+    text-indent: -9999px;
+    overflow: hidden;
+}
+/*网页的身体*/
+.wedbody{
+	width: 1110px;
+    margin: 0px auto;
+	overflow: hidden;
+	position: absolute;
+    left: 50%;
+    margin-left: -550px;
+    top: 752px;
+    z-index: 10;
+}
+
+/*左侧的内容*/
+.bodyleft{
+	overflow: hidden;
+	float: left;
+	width: 677px;
+	height: 1854px;
+}
+/*三个按钮*/
+.sangeanniu{overflow: hidden;float: left;}
+.woyaochongzhi{
+	transition:0.2s;
+	float: left;
+	width: 226px;
+	height: 90px;
+	/*background-color: yellowgreen;*/
+	background: url(../img/我要充值.jpg) no-repeat 0px 0px;
+}
+.woyaochongzhi:hover{background-position: 0px -90px;}
+.xiazaiyouxi{
+	transition:0.2s;
+	float: left;
+	width: 225px;
+	height: 90px;
+	/*background-color: yellowgreen;*/
+	background: url(../img/我要充值.jpg) no-repeat -226px 0px;
+}
+.xiazaiyouxi:hover{background-position: -226px -90px;}
+.zhucezhanghao{
+	transition:0.2s;
+	float: left;
+	width: 226px;
+	height: 90px;
+	/*background-color: yellowgreen;*/
+	background: url(../img/我要充值.jpg) no-repeat -452px 0px;
+}
+.zhucezhanghao:hover{background-position: -452px -90px;}
+/*活动中心*/
+.huodongzhongxin{
+	float: left;
+	width: 677px;
+	height: 75px;
+	line-height: 75px;
+	background: url(../img/活动中心.png) no-repeat 0px 0px;
+}
+.huodongzhongxin a{
+	float: right;
+	font: normal "宋体";
+    color: #acacac;
+}
+/*活动区*/
+.huodongqu{
+	overflow: hidden;
+	width: 675px;
+	height: 372px;
+	border: 1px solid #2c393c;
+	background: url(../img/touming.png);
+	padding-bottom: 12px;
+}
+.huodongqu li{
+	float: left;
+	padding: 14px 0px 0px 14px;
+}
+.huodongqu li div{
+	overflow: hidden;
+	height: 30px;
+	width: 205.987px;
+	margin-top: 10px;
+	text-align: center;
+}
+.huodongqu li div a{
+	    color: #eeeeee;
+	    font-family: "微软雅黑","宋体",Arial, Helvetica, sans-serif;
+	    font-size: 14px;	   
+}
+.huodongqu li div a:hover{color: #ed3f02;text-decoration: underline;}
+.texiaofartherPosition{
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+.texiao{
+	width: 90px;
+    height: 28px;
+    background: url(../img/hovericon.png) 0px 0px no-repeat;
+    position: absolute;
+    top: 33px;
+    left: 3px;
+    display: none;
+}
+.texiaofartherPosition:hover .texiao{
+	display: block;
+}
+.texiaofartherPosition:hover img{
+	width: 200px;
+    height: 126px;
+    border: 3px solid #981b07;   
+}
+/*DOTA2历史版本更新日志*/
+.gengxinrizhi{
+	float: left;
+	width: 677px;
+	height: 67px;
+	background: url(../img/历史版本更新日志.png) no-repeat 0px 0px;
+}
+/*日志更新区*/
+.rizhiqu{
+	overflow: hidden;
+	width: 675px;
+	height: 198px;
+	border: 1px solid #2c393c;
+	background: url(../img/touming.png);
+}
+.rizhiqu li{
+	float: left;
+	padding: 20px 0px 0px 14px;
+}
+.rizhiqu li div{
+	overflow: hidden;
+	height: 30px;
+	width: 205.987px;
+	margin-top: 10px;
+	text-align: center;
+}
+.rizhiqu li div a{
+	    color: #eeeeee;
+	    font-family: "微软雅黑","宋体",Arial, Helvetica, sans-serif;
+	    font-size: 18px;
+}
+.rizhiqu li div a:hover{color: #ed3f02;}
+/*新闻中心*/
+.xinwenzhongxin{
+	float: left;
+	width: 677px;
+	height: 65px;
+	background: url(../img/xinwenzhongxin.png) no-repeat 0px 0px;
+}
+/*新闻区*/
+.news ul>li{
+	transition:0.3s ;
+	float: left;
+	width: 130px;
+    height: 42px;
+    font: normal 16px/42px "微软雅黑";
+    color: #e8e8e8;
+    background: url(../img/nav_newsli.png) 0px 0px;
+    text-align: center;
+    border-right: 1px solid #0f0f0f;
+    border-bottom: 1px solid #0f0f0f;    
+    cursor: pointer;
+}
+.news ul{
+	width: 657px;
+    height: 43px;
+    margin: 0 auto;
+    border-top: 1px solid #0f0f0f;
+    border-left: 1px solid #0f0f0f;
+}
+.news{
+	position: relative;
+	top: 0px;
+	left: 0px;
+	overflow: hidden;
+	float: left;
+	width: 675px;
+    height: 957px;
+    padding-top: 12px;
+    background-image: url(../img/touming.png);
+    border: 1px solid #2c393c;
+}
+#news_neiRong>div{display:none;}
+/*新闻内容*/
+    /*综合*/
+.new_neirong{
+	width: 656px;
+    height: 845px;
+    margin: 13px auto 0;
+    overflow: hidden;
+}
+.im_news{
+	width: 656px;
+    height: 60px;
+    background-image:url(../img/im_bg.png);
+    text-align: center;
+    overflow: hidden;
+}
+.im_news a{
+	font: normal 18px/60px "微软雅黑";
+    color: #ff4503;
+}
+.im_news a:hover{text-decoration: underline;}
+.hd_ps{
+    height: 148px;
+    width: 656px;
+    padding-top: 6px;
+    margin: 0 auto;
+    border-bottom: 1px solid #49575e;	
+}
+.hd_ps dt {
+    float: left;
+    width: 212px;
+    height: 141px;
+    text-align: center;
+    overflow: hidden;
+}
+.hd_ps dt a{
+    font-family: "微软雅黑","宋体",Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    outline: none;
+}
+.hd_ps dd{
+    float: right;
+    width: 430px;
+}
+.hd_ps dd h2{
+    width: 430px;
+    height: 40px;
+    overflow: hidden;
+}
+.hd_ps dd h2 a{
+    font: bold 16px/40px "微软雅黑";
+    color: #eeeeee;
+}
+.hd_ps dd h2 a:hover{color: #ff4503;text-decoration: underline;}
+.hd_ps dd p{
+    height: 69px;
+    font: normal 12px/23px "宋体";
+    color: #bebebe;
+    overflow: hidden;
+}
+.hd_ps dd h3{
+    padding-top: 10px;
+    color: #888888;
+}
+/*新闻的末尾*/
+.news_more{
+	position: absolute;
+	bottom: 0px;
+	left: 10px;
+	display: block;
+    width: 656px;
+    height: 44px;
+    margin: 0 auto;
+    background-image: url(../img/news_more.png);
+    overflow: hidden;
+    z-index: 99;
+}
+
+/*右侧的内容*/
+.bodyright{
+	overflow: hidden;
+	float: right;
+	width: 406px;
+	height: 1854px;	
+}
+/*图片盒子*/
+.img_box {
+    width: 398px;
+    background-color: #090d14;
+    border: 4px solid #090d14;
+    overflow: hidden;
+    }
+.r_img_s{margin-top: 7px;}   
+ /*历史回顾*/
+.lishihuigu{
+	width: 406px;
+    height: 65px;
+    text-align: right;
+    background: url(../img/lishihuigu.png) 0 0 no-repeat;
+    overflow: hidden;
+}
+.lishihuigu a{
+	font: normal 12px/75px "宋体";
+    color: #acacac;
+} 
+.lishihuigu a:hover{text-decoration: underline;}
+/*历史内容*/ 
+.lishineirong{
+	position: relative;
+    width: 404px;
+    height: 186px;
+    overflow: hidden;
+    background: url(../img/touming.png);
+    border: 1px solid #2c393c;
+}
+#demo {
+    width: 380px;
+    height: 170px; 
+    margin: 14px auto 0px auto;
+    overflow: hidden;
+}
+
+#demo a {
+	transition:0.5s;
+	width: 206px;
+	overflow: hidden;
+	display: inline-block;
+	height: 100%;
+}
+#indemo img{
+	transition:0.5s;
+	float: left;
+}
+#demo a p{
+	width: 206px;
+	height: 19px;
+	margin: 10px auto 0px auto;
+	font-size: 14px;
+    color: #eeeeee;
+    text-align: center;
+	overflow: hidden;
+	display: inline-block;	
+}
+#indemo {
+	float: left;
+	width: 800%;
+}
+#demo1 {
+	float: left;
+}
+#demo2 {
+	float: left;
+}
+/*游戏指引*/
+.gamezhiyin{
+	width: 406px;
+    height: 65px;
+    background: url(../img/gamezhiyin.png);
+    overflow: hidden;
+}
+/*游戏指引内容*/ 
+.zhiyinneirong{
+	width: 406px;
+    height: 99px;
+    overflow: hidden;	
+}
+.zhiyin_a1{
+    width: 203px;
+	height: 99px;
+	float:left;	
+	background: url(../img/img-zhiyin.jpg) no-repeat 0px -99px;
+}
+.zhiyin_a1:hover{background-position: 0px 0px;}
+.zhiyin_a2{    
+    width: 203px;
+	height: 99px;
+	float:right;	
+	background: url(../img/img-zhiyin.jpg) no-repeat -203px -99px;
+}  
+.zhiyin_a2:hover{background-position: -203px 0px;}    
+/*客服专区*/    
+.kefu_t{
+	width: 406px;
+    height: 71px;
+    background: url(../img/t_kefu.png) 0 0 no-repeat;
+    overflow: hidden;
+}
+/*常见问题*/ 
+.changjianwenti{
+	width: 404px;
+    height: 520px;
+    background: url(../img/touming.png);
+    border: 1px solid #2c393c;
+}
+.changjianwenti>p{
+	padding: 20px 0 0 16px;
+    font: normal 16px "微软雅黑";
+    color: #eeeeee;
+}  
+.changjianwenti>ul{
+	width: 383px;
+    margin: 10px auto 0;
+    overflow: hidden;
+}   
+.changjianwenti>ul li{
+    width: 383px;
+    height: 32px;   
+}   
+.changjianwenti>ul li a{ 
+	transition:0.2s ;
+	display: block;
+    width: 383px;
+    height: 32px;
+    font: normal 12px/32px "微软雅黑";
+    color: #b7b9b9;
+    background: url(../img/q_li.png) no-repeat 0px 0px;
+    text-indent: 20px;
+}      
+.changjianwenti>ul li a:hover{
+	color: #e74f12;
+    background-position: 0px -32px;
+}    
+/*网页的脚部*/   
+#footer{
+	margin:0px auto; 
+	width:100%;
+	height: 90px;
+	padding:20px 0px; 
+	background: #000;
+} 
+.footer{
+	margin: 0 auto;
+    width: 1002px;
+}
+.footer p{
+	text-align:center;
+	color: #878686;
+}   
+.foot_dl dt{
+    float: left;
+    width: 178px;
+    padding: 16px 0 0 120px;
+}
+.foot_dl ins{float: right;} 
+.foot_dl dd{
+    float: right;
+    width: 680px;
+    line-height: 16px;
+    font-family: Arial !important;
+    color: #878686;
+    padding: 12px 0px 0px 0px;
+}  
+
+/*扫描APP滑动侧边栏*/
+.shouQi{
+	cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -27px;
+    font-size: 14px;
+    width: 27px;
+    background-color: #ac3c26;
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+    padding: 10px 0;
+    transition:0.7s ;
+}
+.shouQi:hover {
+    background-color: #c15945;
+    text-decoration: none;
+}
+.shouQi i{
+	display: block;
+    width: 9px;
+    height: 15px;
+    margin: 5px auto 0;
+	background: url(../img/icon-float-bar.png) no-repeat -87px -11px;
+}
+#Hd_ce{
+	transition:0.8s;
+	color: #999;
+    width: 146px;
+    height: 602px;
+    position: fixed;
+    right: 0px;
+    top: 50%;
+    margin-top: -294px;
+    background-color: #2c3437;
+    z-index: 101;
+}
+.kefu{
+	height: 95px;
+    line-height: 20px;
+    padding: 26px 0px 5px 0px;
+    text-align: center;
+    border-bottom: 1px solid #47494d;
+    background: url(../img/bg-kefu.png) repeat-x 0 0;
+}
+.kefu_a{
+	width: 110px;
+	height: 32px;
+	line-height:32px;
+	display: inline-block;
+	border: 1px solid #525e63;
+	cursor: pointer;
+}
+.kefu_a:hover{background-color: #3f4a4e;}
+.kefu_a_i{
+	float: left;
+	margin: 7px;
+    width: 18px;
+    height: 18px;
+    background: url(../img/kefuxinlang.png) no-repeat -10px -11px;
+}
+.kefu_a:hover .kefu_a_i{background-position: -10px -55px;}
+.kefu a span{float: right;margin-right: 19px;}
+.kefu p{
+	display: inline-block;
+	width: 144px;
+	height: 40px;
+	padding: 8px 0px;
+}
+.xinlang{
+	padding: 5px;
+    line-height: 20px;
+    padding-top: 26px;
+    text-align: center;
+    border-bottom: 1px solid #47494d;
+    background: url(../img/bg-kefu.png) repeat-x 0 0;
+}
+.xinlang a{
+	width: 110px;
+	height: 32px;
+	line-height:32px;
+	display: inline-block;
+	border: 1px solid #525e63;
+	cursor: pointer;
+}
+.xinlang a:hover{background-color: #3f4a4e;}
+.xinlang a i{
+	float: left;
+	margin: 7px;
+    width: 18px;
+    height: 18px;
+    background: url(../img/kefuxinlang.png) no-repeat -10px -11px;;
+}
+.xinlang_a:hover .xinlang_a_i{background-position: -10px -55px;}
+.xinlang a span{float: right;margin-right: 19px;}
+.xinlang>div{
+	width: 136px;
+	height: 139px;
+	margin-bottom: 20px;
+}
+.xinlang>div p{
+	font-size: 14px;
+    height: 24px;
+    margin: 20px 0px 5px;
+}
+.xinlang>div div{
+	background: url(../img/erweima.png) no-repeat 0 0;
+    width: 110px;
+    height: 110px;
+    margin: 0 auto;
+}
+.dota2app{
+	transition:0.8s;
+	display: inline-block;
+	width: 136px;
+	height: 194px;
+	padding: 26px 5px 5px 5px;
+	background: url(../img/dota2app.jpg) no-repeat 0px 0px;
+}
+.dota2app:hover{background-position-x: -145px;}

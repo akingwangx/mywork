@@ -1,0 +1,101 @@
+
+.bgco{
+	background-color:#eb941e;
+	height: 40px;
+
+}
+.bgco a,.bgco h1{
+	color:#FFFFff;
+}
+.txt{
+	font-size: 6px;
+	color:#fff;
+}
+.bgimg img{
+	width: 100%;
+	height: 262px;
+	margin-top: -4px;
+	position: relative;
+	
+}
+.touxiang{
+	width: 100%;
+	height: 73px;
+	position: absolute;
+	top: 222px;
+	left: 74%;
+}
+.touxiang span{
+	padding-top: -50px;
+}
+.touxiang img{
+	width: 73px;
+	height: 73px;
+	border-radius: 50%;
+}
+
+
+.list{
+	clear: both;
+	margin-top: 30px;
+	margin-left: 8px;
+	height: 310px;
+	border-bottom: 1px solid #dbdbdb;
+	
+	
+}
+.list-p img{
+	width: 43px;
+	height: 43px;
+	border-radius: 50%;
+	float: left;
+}
+.list-s{
+	width: 80%;
+	float: left;
+	margin-left: 5px;
+	margin-top:5px;
+}
+.list-s span,p{
+	color: #000000;
+	font-size: 14px;
+	font-family: "微软雅黑";
+	padding-top: 15px;
+
+}
+.list-s span{
+	font-weight: bold;
+	color: #0062cc;
+}
+.list-s img{
+	width: 240px;
+	height: 180px;
+	
+}
+.list-f{
+	margin-top: 20px;
+	
+}
+.list-f span{
+	color: #000;
+	font-weight: 400;
+	font-size: 13px;
+	
+}
+.list-f img{
+	width: 20px;
+	height: 20px;
+	float: right;
+}
+#picture{
+	margin-bottom: 0px;
+}
+.mui-icon-left-nav{
+	color: #000000;
+	
+}
+
+
+
+
+

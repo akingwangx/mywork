@@ -1,0 +1,37 @@
+.mui-bar{
+	background-color: #EC971F;
+	padding-left: 0;
+	
+}
+.mui-search .mui-placeholder {
+    font-size: 12px;
+    /*padding-top: 3px;*/
+    }
+    .mui-icon-search:before {
+    content: '\e466';
+    font-size: 14px;
+}
+.mui-bar .mui-icon{
+	color: white;
+}
+.mui-slider{
+	background-color: white;
+}
+#sliderProgressBar{
+	background-color: #EC971F;
+}
+#item1 .mui-table-view{
+	padding-right: 2px;
+}
+#item1 .mui-table-view a{
+	padding-left: 2px;
+	padding-top: 2px;
+}
+
+
+
+
+
+
+
+

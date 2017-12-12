@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/wode.css"/>
+    <link rel="stylesheet" type="text/css" href="css/icons-extra.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+    
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav" id="head">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title">我的</h1>
+	
+	</header>
+    <div class="mui-content">
+    	<a  href="login.html" type="button" id="button" class="mui-btn  mui-btn-outlined mui-pull-right">点击登录/注册</a>   
+       <img id="tu" class="mui-media-object" src="images/001.jpg">
+       
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell mui-media">
+            <a href="ready.html" class="mui-navigate-right">
+                <img id="photo" class="mui-media-object mui-pull-left" src="images/44.jpg">
+                <div class="mui-media-body">
+                    木木夕子
+                    <p class="mui-ellipsis">个人主页</p>
+                </div>
+            </a>
+        </li>
+       
+    </ul>
+   <ul class="mui-table-view" id="my">
+   	
+           <li class="mui-table-view-cell">
+            
+            <a class="mui-navigate-right" href="date.html">
+                  <span class="mui-icon-extra mui-icon-extra mui-icon-extra mui-icon-extra-calendar"></span>&nbsp;纪念日管理
+               </a>
+           </li>
+           <li class="mui-table-view-cell">
+               <a href="ready.html" class="mui-navigate-right">
+                  <span class="mui-icon-extra mui-icon-extra mui-icon-extra-notice"></span>&nbsp;我的关注 
+             
+               </a>
+           </li>
+           <li class="mui-table-view-cell">
+               <a class="mui-navigate-right" href="../xiaoxi-fnn.html">
+                   <span class="mui-icon-extra mui-icon-extra mui-icon-extra-xiaoshuo"></span>&nbsp;我的消息
+             
+               </a>
+           </li>
+           <li class="mui-table-view-cell">
+               <a href="setting.html" class="mui-navigate-right">
+                   <span class="mui-icon mui-icon-gear"></span>&nbsp;设置
+             
+               </a>
+           </li>
+       </ul>
+       <ul class="mui-table-view" >
+       	<li class="mui-table-view-cell" id="foot">
+               
+           </li>
+       </ul>
+    </div>
+    <nav class="mui-bar mui-bar-tab">
+	    		    <a class="mui-tab-item" href="../index.html">
+	    		        <span class="iconfont icon-maozi"></span>
+	    		        <span class="mui-tab-label">烘焙圈</span>
+	    		    </a>
+	    		    <a class="mui-tab-item" href="../wkj/index-yxx.html">
+	    		        <span class="iconfont icon-p-shequ"></span>
+	    		        <span class="mui-tab-label">味空间</span>
+	    		    </a>
+	    		    <a class="mui-tab-item">
+	    		        <span class="iconfont icon-shu"></span>
+	    		        <span class="mui-tab-label">烘焙课</span>
+	    		    </a>
+	    		    <a class="mui-tab-item" href="../friendquan0621/index-wx.html">
+	    		        <span class="iconfont icon-meishi"></span>
+	    		        <span class="mui-tab-label">吃货圈</span>
+	    		    </a>
+	    		    <a class="mui-tab-item mui-active" href="nnnn(2)/wode.html">
+	    		        <span class="iconfont icon-foodmarketpurc"></span>
+	    		        <span class="mui-tab-label">我的</span>
+	    		    </a>
+	    		</nav>
+</body>
+</html>
+<script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	(function($){
+		$(".mui-scroll-wrapper ").scroll({
+		bounce: true,         
+		indicators: true,
+		});
+		})(mui);
+		var gallery = mui('.haha');
+		gallery.slider({
+		interval: 1500 //自动轮播周期，若为0则不自动播放，默认为0；
+		}); 
+		mui.plusReady(function() {
+				mui.os.iOS && plus.navigator.setFullscreen(true);
+				var slider = mui('.mui-slider').slider();
+
+				setStatusBarBackgroud();
+				plus.navigator.closeSplashscreen();
+
+
+				function setStatusBarBackgroud() {
+					if(mui.os.ios) {
+						plus.navigator.setStatusBarStyle("UIStatusBarStyleBlackOpaque");
+						//提前设置登陆页背景颜色 
+						plus.navigator.setStatusBarBackground("#eb941e");
+					}
+				};
+				mui('body').on('tap','a',function(){
+				      window.top.location.href=this.href;
+				  });
+
+			});
+			
+												
+									   
+			
+			
+			
+			
+			
+    </script>

@@ -1,0 +1,32 @@
+.wapper{
+
+}
+/*当你要让一个定宽块状居中,设置他的左右margin为auto*/
+.container{
+    width: 1110px;
+    margin: 0px auto;
+}
+/*清除浮动*/
+.clearfloat:after{
+    content: "clear";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
+/*相对定位与绝对定位弹出框*/
+.sonPosition{
+	background-color: red;
+	position:absolute;
+	top: 29px;
+	left: 0px;
+	display: none;
+}
+.fartherPosition{
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+.fartherPosition:hover .sonPosition{
+	display: block;
+}

@@ -1,0 +1,466 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			#head {
+				background-color: #EB941E;
+			}
+			
+			.wen {
+				position: absolute;
+				color: #333333;
+				font-size: larger;
+				margin-left: 150px;
+				margin-top: -50px;
+			}
+			
+			#photo {
+				position: absolute;
+				width: 60px;
+				height: 60px;
+				margin-top: -120px;
+				border-radius: 50px;
+				margin-left: 160px;
+			}
+			
+			.mui-icon-back:before,
+			.mui-icon-left-nav:before {
+				color: white;
+			}
+			
+			.mui-bar .mui-title {
+				right: 40px;
+				left: 40px;
+				display: inline-block;
+				overflow: hidden;
+				width: auto;
+				margin: 0;
+				text-overflow: ellipsis;
+				color: white;
+			}
+			
+			.mui-slider .mui-slider-group .mui-slider-item img {
+				width: auto;
+			}
+			
+			.pic {
+				width: 100%;
+				height: 200px;
+				position: relative;
+			}
+			
+			img {
+				border: 0;
+				height: 230px;
+			}
+			
+			.mui-card-link {
+				color: gray;
+			}
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item {
+    color: #eb9140;
+    border: 0;
+}
+.mui-slider .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+    border-bottom: 0;
+    color: #eb9140;
+}
+.mui-segmented-control.mui-segmented-control-inverted~.mui-slider-progress-bar {
+    background-color: #eb9140;
+}
+		</style>
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<header class="mui-bar mui-bar-nav" id="head">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">个人主页</h1>
+		</header>
+
+		<div class="mui-content">
+			<div class="pic">
+				<img src="images/004.jpg" style="height: 100%;width: 100%;" />
+			</div>
+
+			<img id="photo" src="images/44.jpg" />
+			<h4 class="wen">木木夕子</h4>
+
+			<div class="mui-slider">
+				<div class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<a class="mui-control-item" href="#item1">关注</a>
+					<a class="mui-control-item" href="#item2">评论</a>
+					<a class="mui-control-item" href="#item3">点赞</a>
+				</div>
+				<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
+				<div class="mui-slider-group">
+					<div id="item1" class="mui-slider-item mui-control-content mui-active">
+
+						<div class="mui-card">
+							<div class="mui-card-header mui-card-media">
+								<img src="images/011.jpg" />
+								<div class="mui-media-body">
+									小xi
+									<p>发表于 2016-06-30 15:30</p>
+								</div>
+
+							</div>
+							<div class="mui-card-content">
+								<img src="images/005.jpeg" alt="" width="100%" style="width: 100%;" />
+							</div>
+							<div class="mui-card-footer">
+								<a class="mui-card-link">Like</a>
+
+								<a class="mui-card-link">Read more</a>
+							</div>
+						</div>
+						<div class="mui-card">
+							<div class="mui-card-header mui-card-media">
+								<img src="images/029.jpg" />
+								<div class="mui-media-body">
+									丽丽
+									<p>发表于 2016-06-28 15:30</p>
+								</div>
+
+							</div>
+							<div class="mui-card-content">
+								<img src="images/008 (1).jpeg" alt="" width="100%" style="width: 100%;" />
+							</div>
+							<div class="mui-card-footer">
+								<a class="mui-card-link">Like</a>
+
+								<a class="mui-card-link">Read more</a>
+							</div>
+						</div>
+						<div class="mui-card">
+							<div class="mui-card-header mui-card-media">
+								<img src="images/033.jpg" />
+								<div class="mui-media-body">
+									里拉
+									<p>发表于 2016-06-25 18:30</p>
+								</div>
+
+							</div>
+							<div class="mui-card-content">
+								<img src="images/003.jpg" alt="" width="100%" style="width: 100%;" />
+							</div>
+							<div class="mui-card-footer">
+								<a class="mui-card-link">Like</a>
+
+								<a class="mui-card-link">Read more</a>
+							</div>
+						</div>
+						<div class="mui-card">
+							<div class="mui-card-header mui-card-media">
+								<img src="images/034.jpg" />
+								<div class="mui-media-body">
+									凉
+									<p>发表于 2016-06-30 15:34</p>
+								</div>
+
+							</div>
+							<div class="mui-card-content">
+								<img src="images/009.jpeg" alt="" width="100%" style="width: 100%;" />
+							</div>
+							<div class="mui-card-footer">
+								<a class="mui-card-link">Like</a>
+
+								<a class="mui-card-link">Read more</a>
+							</div>
+						</div>
+						<div class="mui-card">
+							<div class="mui-card-header mui-card-media">
+								<img src="images/031.jpg" />
+								<div class="mui-media-body">
+									花花
+									<p>发表于 2016-06-20 9:30</p>
+								</div>
+
+							</div>
+							<div class="mui-card-content">
+								<img src="images/006.jpg" alt="" width="100%" style="width: 100%;" />
+							</div>
+							<div class="mui-card-footer">
+								<a class="mui-card-link">Like</a>
+
+								<a class="mui-card-link">Read more</a>
+							</div>
+						</div>
+					</div>
+					<div id="item2" class="mui-slider-item mui-control-content">
+						
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;">
+									<img class="mui-media-object mui-pull-left" src="images/027.jpg">
+									<div class="mui-media-body">
+										曲奇
+										<p class="mui-ellipsis">根据这个做法做出的美味是你想象不到的</p>
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;">
+									<img class="mui-media-object mui-pull-left" src="images/028.jpg">
+									<div class="mui-media-body">
+										慕斯蛋糕
+										<p class="mui-ellipsis">美味不可抵挡</p>
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;">
+									<img class="mui-media-object mui-pull-left" src="images/029.jpg">
+									<div class="mui-media-body">
+										巧克力
+										<p class="mui-ellipsis">香甜的味道回味久久</p>
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;">
+									<img class="mui-media-object mui-pull-left" src="images/027.jpg">
+									<div class="mui-media-body">
+										奶油
+										<p class="mui-ellipsis">根据自己的需求制作奶油</p>
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;">
+									<img class="mui-media-object mui-pull-left" src="images/028.jpg">
+									<div class="mui-media-body">
+										玫瑰饼
+										<p class="mui-ellipsis">这是一个完美的杰作</p>
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;">
+									<img class="mui-media-object mui-pull-left" src="images/029.jpg">
+									<div class="mui-media-body">
+										时间
+										<p class="mui-ellipsis">烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;">
+									<img class="mui-media-object mui-pull-left" src="images/027.jpg">
+									<div class="mui-media-body">
+										曲奇
+										<p class="mui-ellipsis">根据这个做法做出的美味是你想象不到的</p>
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;">
+									<img class="mui-media-object mui-pull-left" src="images/028.jpg">
+									<div class="mui-media-body">
+										慕斯蛋糕
+										<p class="mui-ellipsis">美味不可抵挡</p>
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;">
+									<img class="mui-media-object mui-pull-left" src="images/029.jpg">
+									<div class="mui-media-body">
+										巧克力
+										<p class="mui-ellipsis">香甜的味道回味久久</p>
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;">
+									<img class="mui-media-object mui-pull-left" src="images/027.jpg">
+									<div class="mui-media-body">
+										奶油
+										<p class="mui-ellipsis">根据自己的需求制作奶油</p>
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;">
+									<img class="mui-media-object mui-pull-left" src="images/028.jpg">
+									<div class="mui-media-body">
+										玫瑰饼
+										<p class="mui-ellipsis">这是一个完美的杰作</p>
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;">
+									<img class="mui-media-object mui-pull-left" src="images/029.jpg">
+									<div class="mui-media-body">
+										烤炉时间
+										<p class="mui-ellipsis">烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div id="item3" class="mui-slider-item mui-control-content">
+						
+						<ul class="mui-table-view mui-grid-view">
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<img class="mui-media-object" src="images/013.jpeg">
+									<div class="mui-media-body">32902点赞<span class="mui-icon-extra mui-icon-extra mui-icon-extra-heart"></span></div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<img class="mui-media-object" src="images/013.jpg">
+									<div class="mui-media-body">39990点赞</div>
+								</a>
+							</li>
+						</ul>
+						<ul class="mui-table-view mui-grid-view">
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<img class="mui-media-object" src="images/015 (1).jpeg">
+									<div class="mui-media-body">45900点赞<span class="mui-icon-extra mui-icon-extra mui-icon-extra-heart-filled"></span></div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<img class="mui-media-object" src="images/015 (2).jpeg">
+									<div class="mui-media-body">23479点赞</div>
+								</a>
+							</li>
+						</ul>
+						<ul class="mui-table-view mui-grid-view">
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<img class="mui-media-object" src="images/016.jpeg">
+									<div class="mui-media-body">23758点赞<span class="mui-icon-extra mui-icon-extra mui-icon-extra-heart-filled"></span></div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<img class="mui-media-object" src="images/017.jpeg">
+									<div class="mui-media-body">46894点赞</div>
+								</a>
+							</li>
+						</ul>
+						<ul class="mui-table-view mui-grid-view">
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<img class="mui-media-object" src="images/018.jpeg">
+									<div class="mui-media-body">32902点赞<span class="mui-icon-extra mui-icon-extra mui-icon-extra-heart-filled"></span></div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<img class="mui-media-object" src="images/020 (1).jpeg">
+									<div class="mui-media-body">23450点赞</div>
+								</a>
+							</li>
+						</ul>
+						<ul class="mui-table-view mui-grid-view">
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<img class="mui-media-object" src="images/015 (1).jpeg">
+									<div class="mui-media-body">45900点赞<span class="mui-icon-extra mui-icon-extra mui-icon-extra-heart-filled"></span></div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<img class="mui-media-object" src="images/015 (2).jpeg">
+									<div class="mui-media-body">23479点赞</div>
+								</a>
+							</li>
+						</ul>
+						<ul class="mui-table-view mui-grid-view">
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<img class="mui-media-object" src="images/021 (1).jpeg">
+									<div class="mui-media-body">211100点赞</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<img class="mui-media-object" src="images/023 (1).jpeg">
+									<div class="mui-media-body">3000点赞</div>
+								</a>
+							</li>
+						</ul>
+						<ul class="mui-table-view mui-grid-view">
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<img class="mui-media-object" src="images/024.jpeg">
+									<div class="mui-media-body">32902点赞<span class="mui-icon-extra mui-icon-extra mui-icon-extra-heart-filled"></span></div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<img class="mui-media-object" src="images/pexels-photo-24553_h=350&auto=compress&cs=tinysrgb.jpg">
+									<div class="mui-media-body">28100点赞</div>
+								</a>
+							</li>
+						</ul>
+						<ul class="mui-table-view mui-grid-view">
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<img class="mui-media-object" src="images/013.jpeg">
+									<div class="mui-media-body">32902点赞<span class="mui-icon-extra mui-icon-extra mui-icon-extra-heart-filled"></span></div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<img class="mui-media-object" src="images/013.jpg">
+									<div class="mui-media-body">87899点赞</div>
+								</a>
+							</li>
+						</ul>
+						<ul class="mui-table-view mui-grid-view">
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<img class="mui-media-object" src="images/015 (1).jpeg">
+									<div class="mui-media-body">32978点赞<span class="mui-icon-extra mui-icon-extra mui-icon-extra-heart-filled"></span></div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<img class="mui-media-object" src="images/015 (2).jpeg">
+									<div class="mui-media-body">22200点赞</div>
+								</a>
+							</li>
+						</ul>
+						<ul class="mui-table-view mui-grid-view">
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<img class="mui-media-object" src="images/016.jpeg">
+									<div class="mui-media-body">32900点赞<span class="mui-icon-extra mui-icon-extra mui-icon-extra-heart-filled"></span></div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<img class="mui-media-object" src="images/017.jpeg">
+									<div class="mui-media-body">332238点赞</div>
+								</a>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+			</div>
+
+			<!---->
+
+		</div>
+
+	</body>
+
+</html>

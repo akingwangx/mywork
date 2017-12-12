@@ -1,0 +1,33 @@
+.bg{
+	background-image: linear-gradient(to bottom, #eb941e 0%, #eb9140 100%);
+}
+.color-w{
+	color: white;
+}
+.bg h1{
+	color: white;
+	font-size: 16px;
+}
+.play{
+	float: left;
+	position: absolute;
+	top: 47%;
+	left: 43%;
+	padding: 0;
+	border-radius: 40px;
+	background: transparent;
+	border: none;
+}
+.zi{
+	font-size: 14px;
+	padding: 5px 0px;
+	font-family: "楷体";
+}
+.zan1{
+	display: block;
+}
+.zan2{
+	width: 16px;
+	height: 16px;
+	display: none;
+}

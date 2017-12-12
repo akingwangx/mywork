@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="shortcut icon" href=""/>
+		<meta name="copyright" content="网站版权" />
+		<meta name="keywords" content="网站关键字" />
+		<meta name="description" content="网站描述" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8" />
+		<title>注册账号</title>
+		<link rel="stylesheet" type="text/css" href="css/default.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/注册的账号的样式.css"/>
+	</head>
+	<body>
+		<!--闹钟-->
+		<div id="div">
+			<div id="dangQianShiJian">
+				<p>当前时间:</p>
+				<span id="time"></span>
+			</div>
+		</div>
+			
+		<!--正文内容开始-->
+		<div class="zhengTI">
+			<!--顶部的语言切换-->
+			<div class="yuYanQieHuan">
+				<a id="jiantizhongwen">简体中文</a>
+				<i>|</i>
+				<a id="yingwen">English</a>
+			</div>
+			<!--注册内容部分-->
+			<div class="wapper">
+				<a class="logo"></a>
+				<!--中文部分-->
+				<div id="chinese">
+					<h2 class="tit">免费注册完美通行证</h2>
+					<p class="tit_down">创建完美世界账号，抢先享受全方位的游戏服务</p>
+					<div class="zhuCe_xvanZe">
+						<a id="cur">
+							手机注册（推荐）
+							<i></i>
+						</a>
+						<a>
+							邮箱注册 
+							<i></i>
+						</a>
+					</div>
+					<div class="shouJiZhuCe">
+						<form action="#" method="post">
+							<!--手机号码-->
+							<div class="ibox psa_1" id="shoujihaoma_father" style="display: block;">
+								<input type="text" id="shoujihaoma" placeholder="手机号"/>
+								<i></i>
+								<span class="yes" id="shoujihaoma_span" style="display: none;">手机号码可用</span>
+							</div>	
+							<!--邮箱-->
+							<div class="ibox psa_1" id="youxiang_father" style="display: none;">
+								<input type="text" id="youxiang" placeholder="请输入正确的邮箱地址"/>
+								<i></i>
+								<span class="yes" id="youxiang_span" style="display: none;">邮箱可用</span>
+							</div>
+							<!--密码1-->
+							<div class="ibox psa_2" id="mima_father">
+								<input type="password" id="mima" placeholder="密码（由6-16位英文字母及数字组成）"/>
+								<i></i>
+								<span class="no" id="mima_span" style="display: none;">密码格式不正确</span>
+							</div>
+							<div class="pingFen" id="pingFen" style="display: none;">
+								<ul id="qiangdu">
+									<li id="pass_no"><span>低</span></li>
+									<li><span>中</span></li>
+									<li><span>高</span></li>
+								</ul>
+							</div>
+							<!--密码2-->
+							<div class="ibox psa_3" id="mima2_father">
+								<input type="password" id="mima2" placeholder="重复密码"/>
+								<i></i>
+								<span class="no" id="mima2_span" style="display: none;">两次设置的密码不一样</span>
+							</div>
+							<!--真实姓名-->
+							<div class="ibox psa_1" id="xingming_father">
+								<input type="text" id="xingming" placeholder="真实姓名"/>
+								<i></i>
+								<span class="no" id="xingming_span" style="display: none;">不能为空</span>
+							</div>
+							<!--身份证-->
+							<div class="ibox psa_1" id="shenfenzheng_father">
+								<input type="text" id="shenfenzheng" placeholder="身份证"/>
+								<i></i>
+								<span class="no" id="shenfenzheng_span" style="display: none;">不能为空</span>
+							</div>
+							<!--验证码-->
+							<div class="ibox box_yanzheng">
+								<div class="vboxl">									
+									<input type="text" name="" id="" placeholder="验证码" />									
+								</div>
+								<div class="vboxr">
+									<a href="PHP.PHP">获取验证码</a>
+								</div>
+							</div>
+							<!--同意协议-->
+							<div class="xieYi">
+								<input type="checkbox" id="" checked="checked"/>
+								<i></i>
+								<span>
+									我接受
+									<a href="#" target="_blank">《完美通行证用户协议》</a>
+								</span>
+							</div>
+							<!--最后两个a标签-->
+						</form>
+						<a class="zhuce_mianfei" id="sub">免费注册通行证</a>
+						<a class="zhuce_yiyou">已经有通行证了？</a>
+					</div>
+				</div>
+				<!--英文部分-->
+				<div id="english" style="display: none;">
+					<h2 class="tit">你想要玩游戏吗?</h2>
+					<p class="tit_">输入作者信息,抢先享受原创游戏服务</p>
+					<div class="zhuCe_xvanZe">
+						<a id="cur" class="meichangliangdeshoujihaoma">
+							请输入王鑫的手机号码
+							<i></i>
+						</a>
+					</div>
+					<div class="shouJiZhuCe">
+						<form>
+							<!--手机号码-->
+							<div class="ibox psa_1">
+								<input type="text" id="shoujihaoma2" placeholder="王鑫的手机号码"/>
+								<i></i>
+								<span class="yes" style="display: none;">手机号码可用</span>
+							</div>	
+							<!--密码1-->
+							<div class="ibox psa_1">
+								<input type="password" id="mima_2" placeholder="密码（由6-16位英文字母及数字组成）"/>
+								<i></i>
+								<span class="no"style="display: none;">密码格式不正确</span>
+							</div>
+							<!--真实姓名-->
+							<div class="ibox psa_1">
+								<input type="text" id="xingming2" placeholder="真实姓名"/>
+								<i></i>
+								<span class="no"style="display: none;">不能为空</span>
+							</div>
+							<!--身份证-->
+							<div class="ibox psa_1">
+								<input type="text" id="shenfenzheng2" placeholder="身份证"/>
+								<i></i>
+								<span class="no" style="display: none;">不能为空</span>
+							</div>
+							<!--同意协议-->
+							<div class="xieYi">
+								<input type="checkbox" checked="checked"/>
+								<i></i>
+								<span>
+									我接受
+									<a href="#" target="_blank">《王鑫的用户协议》</a>
+								</span>
+							</div>
+							<input type="button" id="meichangliang_btn" value="提交作者信息">
+						</form>
+				</div>
+			</div>			
+		</div>
+		<script src="js/注册账号的中英文切换.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/注册账号的表单验证.js" type="text/javascript" charset="utf-8"></script>		
+		<!--尾巴-->
+	</body>
+</html>
+<script src="js/注册账号的方块钟表的JS.js" type="text/javascript" charset="utf-8"></script>

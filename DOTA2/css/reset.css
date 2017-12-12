@@ -1,0 +1,28 @@
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form
+,fieldset,legend,input,textarea,select
+{margin:0;padding:0;}
+body{
+	font-size: 12px;
+    font-family: "微软雅黑","宋体",Arial, Helvetica, sans-serif;
+    background-color: #000;  
+    -webkit-text-size-adjust:100%;}
+a{text-decoration: none;}
+em{font-style:normal;}
+i{font-style: normal;}
+li{list-style:none;}
+img{border:0;vertical-align:middle;}
+table{border-collapse:collapse;border-spacing:0;}
+p{word-wrap:break-word;}
+
+/*浏览器的初始化:
+浏览器之间存在兼容性的问题,对于这些标签浏览器的
+默认是不同的,为了提高代码的兼容性,将标签的默认样式取消*/
+
+
+
+
+
+
+
+
+

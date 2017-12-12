@@ -1,0 +1,80 @@
+
+      #head{
+    		background-color: #EB941E;
+    	}
+    	#tu{
+    		width: 100%;
+    		height: 130px;
+    		position: relative;
+    		
+    		
+    	}
+    	#foot{
+    		height: 180px;
+    		margin-top: 5px;
+    	}
+    	
+    	#my{
+    		margin-top: 5px;
+    	}
+    	#photo{
+    		border: 2px solid #EB941E;
+    		border-radius: 20px;
+    		
+    	}
+    	#button{
+    		z-index: 5;
+    		width: 120px;
+    		height: 28px;
+    		border-radius: 20px;
+    		position: fixed;
+    		margin-top: 60px;
+    		margin-left: 120px;
+    		background: rgba(0,0,0,0.6);
+    		color: white;
+    	}
+.mui-icon-back:before, .mui-icon-left-nav:before {
+    
+    color: white;
+}
+.mui-bar .mui-title {
+    right: 40px;
+    left: 40px;
+    display: inline-block;
+    overflow: hidden;
+    width: auto;
+    margin: 0;
+    text-overflow: ellipsis;
+    color: white;
+}
+.mui-icon-extra-calendar:before {
+    content: "\e115";
+    font-size: 17px;
+}
+.mui-icon-extra-notice:before {
+    content: "\e111";
+    font-size: 17px;
+}
+.mui-icon-extra-xiaoshuo:before {
+    content: "\e607";
+    font-size: 17px;
+}
+.mui-icon-gear:before {
+    content: '\e502';
+    font-size: 17px;
+}
+.mui-tab-label {
+    font-size: 11px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+    
+    .mui-bar-tab .mui-tab-item.mui-active {
+
+    color: #eb941e;
+}
+.mui-table-view-cell>a:not(.mui-btn).mui-active{
+	color: #000000;
+	
+}

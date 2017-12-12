@@ -1,0 +1,510 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		
+	</head>
+	<style type="text/css">
+		.pics{
+    		   background: rgba(0,0,0,0.3);
+    width: 100%;
+    height: 100%;
+    padding: 20%;
+    text-align: center;
+    padding-top: 30%;
+    color: white;
+    font-size: x-large;
+    	}
+    	.mui-h5, h5 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #8f8f94;
+    text-align: center;
+    margin: 20px auto;
+}
+.btn-1{
+	padding: 3px 4px 3px 2px;
+    margin-top: -30px;
+    border-radius: 5px;
+    font-size: small;
+}
+.title { position: relative; z-index: 2; font-size: 16px; line-height: 24px; text-align: center; color: #999; overflow: hidden; padding: 15px;}
+.title .caption { position: relative; display: inline-block;color: #666666;}
+.title .caption .line { position: absolute; top: 11px; width: 600px; height: 1px; background-color: #ddd; }
+.title .caption .line-l { right: 100%; margin-right: 15px; }
+.title .caption .line-r { left: 100%; margin-left: 15px; }
+
+.text2{
+    		color: white;
+    		line-height: 40px;
+    		font-size: 14px;
+    	}
+    	.text1{
+    		color: white;
+    		font-size:x-large;
+    		padding-bottom: 10px;
+    	}
+    	
+    	.pic{
+    		background: rgba(0,0,0,0.3);
+    		width: 100%;
+    		height: 100%;
+    		padding: 10%; 
+    		text-align: center;
+    		padding-top: 30%;
+    		/*position: absolute;
+    		margin-top: -140;*/
+    	}
+    	.mui-icon-back:before, .mui-icon-left-nav:before {
+    content: '\e471';
+    color: white;
+}
+.mui-preview-image.mui-fullscreen {
+				position: fixed;
+				z-index: 20;
+				background-color: #000;
+			}
+			.mui-preview-header,
+			.mui-preview-footer {
+				position: absolute;
+				width: 100%;
+				left: 0;
+				z-index: 10;
+			}
+			.mui-preview-header {
+    height: 44px;
+    top: 20%;
+    left: 40%;
+}
+			.mui-preview-footer {
+				height: 50px;
+				bottom: 0px;
+			}
+			.mui-preview-header .mui-preview-indicator {
+				display: block;
+				line-height: 25px;
+				color: #fff;
+				text-align: center;
+				margin: 15px auto 4;
+				width: 70px;
+				background-color: rgba(0, 0, 0, 0.4);
+				border-radius: 12px;
+				font-size: 16px;
+			}
+			.mui-preview-image {
+				display: none;
+				-webkit-animation-duration: 0.5s;
+				animation-duration: 0.5s;
+				-webkit-animation-fill-mode: both;
+				animation-fill-mode: both;
+			}
+			.mui-preview-image.mui-preview-in {
+				-webkit-animation-name: fadeIn;
+				animation-name: fadeIn;
+			}
+			.mui-preview-image.mui-preview-out {
+				background: none;
+				-webkit-animation-name: fadeOut;
+				animation-name: fadeOut;
+			}
+			.mui-preview-image.mui-preview-out .mui-preview-header,
+			.mui-preview-image.mui-preview-out .mui-preview-footer {
+				display: none;
+			}
+			.mui-zoom-scroller {
+				position: absolute;
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-align: center;
+				-webkit-align-items: center;
+				align-items: center;
+				-webkit-box-pack: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				-webkit-backface-visibility: hidden;
+			}
+			.mui-zoom {
+				-webkit-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+			}
+			.mui-slider .mui-slider-group .mui-slider-item img {
+				width: auto;
+				height: auto;
+				max-width: 100%;
+				max-height: 100%;
+			}
+			.mui-android-4-1 .mui-slider .mui-slider-group .mui-slider-item img {
+				width: 100%;
+			}
+			.mui-android-4-1 .mui-slider.mui-preview-image .mui-slider-group .mui-slider-item {
+				display: inline-table;
+			}
+			.mui-android-4-1 .mui-slider.mui-preview-image .mui-zoom-scroller img {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			.mui-preview-loading {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				display: none;
+			}
+			.mui-preview-loading.mui-active {
+				display: block;
+			}
+			.mui-preview-loading .mui-spinner-white {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-left: -25px;
+				margin-top: -25px;
+				height: 50px;
+				width: 50px;
+			}
+			.mui-preview-image img.mui-transitioning {
+				-webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+				transition: transform 0.5s ease, opacity 0.5s ease;
+			}
+			@-webkit-keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			@keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			@-webkit-keyframes fadeOut {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+			@keyframes fadeOut {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+			p img {
+				max-width: 100%;
+				height: auto;
+			}
+	</style>
+
+	<body>
+		<header id="header" class="mui-bar mui-bar-transparent" style="background-color: rgba(235,148,30,0);">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title" style="color: white;">热门话题</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-card" style="margin: 0px;">
+				
+				<div class="mui-card-content">
+					<div class="mui-card-header mui-card-media" style="height:70vw;background-image:url(img/page6.jpeg);padding: 0px;">
+					<div class="pics">
+						<span class="text1">#最美婚礼蛋糕#</span><br />
+						<span class="text2"> </span>
+					</div>
+				</div>
+				</div>
+				
+				
+			</div>
+			
+			<div class="title">
+    <span class="caption"><span class="line line-l"></span>话题精华<span class="line line-r"></span></span>
+</div>
+
+		</div>
+		
+		<div class="middle-page">
+			<div class="mui-card">
+				<div class="mui-card-header mui-card-media">
+					<img src="img/22.jpg" />
+					<div class="mui-media-body">
+						APPLE
+						<p>发表于 2016-06-30 15:30</p>
+						<button type="button" class="mui-btn mui-btn-warning  mui-pull-right btn-1"><span class="mui-icon mui-icon-plusempty" style="font-size: 16px;"></span>关注</button>
+					</div>
+					
+					
+				</div>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						
+						<p style="color: #333;margin: 0;"><font color="#EB941E">#最美婚礼蛋糕#</font>婚礼是最美好的事情啦，心情好的时候，吃点甜食吧，它可以让你更加幸福！婚礼需要更多的甜，吃点甜食吧，它可以让你更加幸福！吃点甜食吧，它可以让你更加幸福！吃点甜食吧，它可以让你更加幸福！吃点甜食吧，它可以让你更加幸福！吃点甜食吧，它可以让你更加幸福！</p>
+					</div>
+				</div>
+				<div class="mui-card-content" >
+					<div class="mui-row" style="height: 100px;">
+						<div class="mui-col-xs-4" style="height: 100%;">
+							<img src="img/page4.jpg" alt="" width="100%" height="100%" style="padding: 5px;"data-preview-src="" data-preview-group="1"/>
+						</div>
+						<div class="mui-col-xs-4" style="height: 100%;">
+							<img src="img/page5.jpg" alt="" width="100%" height="100%" style="padding: 5px 0px;" data-preview-src="" data-preview-group="1"/>
+						</div>
+						<div class="mui-col-xs-4" style="height: 100%;">
+							<img src="img/page10.jpg" alt="" width="100%" height="100%"style="padding: 5px;" data-preview-src="" data-preview-group="1"/>
+						</div>
+					</div>
+					<!--<img src="../images/yuantiao.jpg" alt="" width="100%"/>-->
+				</div>
+				<div class="mui-card-footer">
+					
+					<a class="mui-card-link"><span class="iconfont icon-love" style="font-size: 22px; color: darkorange;"></span></a>
+					<a class="mui-card-link"><span class="iconfont icon-huati" style="font-size: 16px;color: darkorange;"></span></a>
+					<a class="mui-card-link"><span class="iconfont icon-huati1" style="font-size: 20px; color: darkorange;"></span></a>
+					
+				</div>
+			</div>
+			
+			
+			<div class="mui-card" style="margin-top: 10px;">
+				<div class="mui-card-header mui-card-media">
+					<img src="img/11.jpg" />
+					<div class="mui-media-body">
+						小芒果
+						<p>发表于 2016-06-21 15:30</p>
+						<button type="button" class="mui-btn mui-btn-warning mui-btn-outlined mui-pull-right btn-1"><span class="mui-icon mui-icon-plusempty" style="font-size: 16px;"></span>关注</button>
+					</div>
+					
+					
+				</div>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						
+						<p style="color: #333;margin: 0;"><font color="#EB941E">#最美婚礼蛋糕#</font>婚礼是最美好的事情啦，心情好的时候，吃点甜食吧，它可以让你更加幸福！婚礼需要更多的甜，吃点甜食吧，它可以让你更加幸福！吃点甜食吧，它可以让你更加幸福！吃点甜食吧，它可以让你更加幸福！吃点甜食吧，它可以让你更加幸福！吃点甜食吧，它可以让你更加幸福！</p>
+					</div>
+				</div>
+				<div class="mui-card-content" >
+					<div class="mui-row" style="height: 100px;">
+						<div class="mui-col-xs-4" style="height: 100%;">
+							<img src="img/page-1.jpeg" alt="" width="100%" height="100%" style="padding: 5px;" data-preview-src="" data-preview-group="2"/>
+						</div>
+						<div class="mui-col-xs-4" style="height: 100%;">
+							<img src="img/page-2.jpeg" alt="" width="100%" height="100%" style="padding: 5px 0px;" data-preview-src="" data-preview-group="2"/>
+						</div>
+						<div class="mui-col-xs-4" style="height: 100%;">
+							<img src="img/page8.jpeg" alt="" width="100%" height="100%"style="padding: 5px;" data-preview-src="" data-preview-group="2"/>
+						</div>
+					</div>
+					<div class="mui-row" style="height: 100px;">
+						<div class="mui-col-xs-4" style="height: 100%;">
+							<img src="img/page6.jpeg" alt="" width="100%" height="100%" style="padding: 0px 5px 5px 5px;" data-preview-src="" data-preview-group="2"/>
+						</div>
+						<div class="mui-col-xs-4" style="height: 100%;">
+							<img src="img/page9.jpeg" alt="" width="100%" height="100%" style="padding: 0px 0px 5px 0px;" data-preview-src="" data-preview-group="2"/>
+						</div>
+						
+					</div>
+				</div>
+				<div class="mui-card-footer">
+					
+					<a class="mui-card-link"><span class="iconfont icon-aixin" style="font-size: 22px; color: darkorange;"></span></a>
+					<a class="mui-card-link"><span class="iconfont icon-huati" style="font-size: 16px;color: darkorange;"></span></a>
+					<a class="mui-card-link"><span class="iconfont icon-huati1" style="font-size: 20px; color: darkorange;"></span></a>
+					
+				</div>
+			</div>
+			
+			
+			
+			
+			<div class="mui-card" style="margin-top: 10px;">
+				<div class="mui-card-header mui-card-media">
+					<img src="img/11.jpg" />
+					<div class="mui-media-body">
+						木木夕子
+						<p>发表于 2016-06-21 15:30</p>
+						<button type="button" class="mui-btn mui-btn-warning mui-btn-outlined mui-pull-right btn-1"><span class="mui-icon mui-icon-plusempty" style="font-size: 16px;"></span>关注</button>
+					</div>
+					
+					
+				</div>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						
+						<p style="color: #333;margin: 0;"><font color="#EB941E">#最美婚礼蛋糕#</font>婚礼是最美好的事情啦，心情好的时候，吃点甜食吧，它可以让你更加幸福！婚礼需要更多的甜，吃点甜食吧，它可以让你更加幸福！吃点甜食吧，它可以让你更加幸福！吃点甜食吧，它可以让你更加幸福！吃点甜食吧，它可以让你更加幸福！吃点甜食吧，它可以让你更加幸福！</p>
+					</div>
+				</div>
+				<div class="mui-card-content" >
+					<div class="mui-row" style="height: 100px;">
+						<div class="mui-col-xs-4" style="height: 100%;">
+							<img src="img/cake-6.jpg" alt="" width="100%" height="100%" style="padding: 5px;" data-preview-src="" data-preview-group="3"/>
+						</div>
+						<div class="mui-col-xs-4" style="height: 100%;">
+							<img src="img/page3.jpg" alt="" width="100%" height="100%" style="padding: 5px 0px;" data-preview-src="" data-preview-group="3"/>
+						</div>
+						
+					</div>
+					<div class="mui-row" style="height: 100px;">
+						<div class="mui-col-xs-4" style="height: 100%;">
+							<img src="img/page7.jpg" alt="" width="100%" height="100%" style="padding: 0px 5px 5px 5px;" data-preview-src="" data-preview-group="3"/>
+						</div>
+						<div class="mui-col-xs-4" style="height: 100%;">
+							<img src="img/cake-1.jpeg" alt="" width="100%" height="100%" style="padding: 0px 0px 5px 0px;" data-preview-src="" data-preview-group="3"/>
+						</div>
+						
+					</div>
+				</div>
+				<div class="mui-card-footer">
+					
+					<a class="mui-card-link"><span class="iconfont icon-love" style="font-size: 22px; color: darkorange;"></span></a>
+					<a class="mui-card-link"><span class="iconfont icon-huati" style="font-size: 16px;color: darkorange;"></span></a>
+					<a class="mui-card-link"><span class="iconfont icon-huati1" style="font-size: 20px; color: darkorange;"></span></a>
+					
+				</div>
+			</div>
+			
+			
+			
+			<div class="title">
+    <span class="caption"><span class="line line-l"></span>更多话题<span class="line line-r"></span></span>
+</div>
+			
+			<div class="mui-slider" >
+		        <div class="mui-slider-group mui-slider-loop">
+		        	<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一个图文表格) -->
+		            <div class="mui-slider-item mui-slider-item-duplicate">
+		                <ul class="mui-table-view mui-grid-view">
+		                    <li class="mui-table-view-cell mui-media mui-col-xs-6" ><a href="#">
+		                    	<div class="mui-card-header mui-card-media" style="height:40vw;background-image:url(img/page6.jpeg);padding: 0px;">
+					<div class="pics" style="padding: 10%;padding-top: 35%;">
+						<span class="text1" style="font-size:16px;">#最美婚礼蛋糕#</span><br />
+						<span class="text2"> </span>
+					</div>
+				</div>
+		                    </li>
+		                    <li class="mui-table-view-cell mui-media mui-col-xs-6" ><a href="#">
+		                    	<div class="mui-card-header mui-card-media" style="height:40vw;background-image:url(img/cake-6.jpg);padding: 0px;">
+					<div class="pics" style="padding: 10%;padding-top: 35%;">
+						<span class="text1" style="font-size:16px;">#一入烘焙深似海#</span><br />
+						<span class="text2"> </span>
+					</div>
+				</div>
+		                    </li>
+		                </ul>
+		            </div>
+		            <div class="mui-slider-item">
+		                <ul class="mui-table-view mui-grid-view">
+		                    <li class="mui-table-view-cell mui-media mui-col-xs-6" ><a href="#">
+		                    	<div class="mui-card-header mui-card-media" style="height:40vw;background-image:url(img/page4.jpg);padding: 0px;">
+					<div class="pics" style="padding: 10%;padding-top: 35%;">
+						<span class="text1" style="font-size:16px;">#分享烘焙幸福时刻#</span><br />
+						<span class="text2"> </span>
+					</div>
+				</div>
+		                    </li>
+		                    <li class="mui-table-view-cell mui-media mui-col-xs-6" ><a href="#">
+		                    	<div class="mui-card-header mui-card-media" style="height:40vw;background-image:url(img/page9.jpeg);padding: 0px;">
+					<div class="pics" style="padding: 10%;padding-top: 35%;">
+						<span class="text1" style="font-size:16px;">#晒晒你DIY烘焙吧#</span><br />
+						<span class="text2"> </span>
+					</div>
+				</div>
+		                    </li>
+		                </ul>
+		            </div>
+		            <div class="mui-slider-item">
+		                <ul class="mui-table-view mui-grid-view">
+		                    <li class="mui-table-view-cell mui-media mui-col-xs-6" ><a href="#">
+		                    	<div class="mui-card-header mui-card-media" style="height:40vw;background-image:url(img/page6.jpeg);padding: 0px;">
+					<div class="pics" style="padding: 10%;padding-top: 35%;">
+						<span class="text1" style="font-size:16px;">#最美婚礼蛋糕#</span><br />
+						<span class="text2"> </span>
+					</div>
+				</div>
+		                    </li>
+		                    <li class="mui-table-view-cell mui-media mui-col-xs-6" ><a href="#">
+		                    	<div class="mui-card-header mui-card-media" style="height:40vw;background-image:url(img/cake-6.jpg);padding: 0px;">
+					<div class="pics" style="padding: 10%;padding-top: 35%;">
+						<span class="text1" style="font-size:16px;">#一入烘焙深似海#</span><br />
+						<span class="text2"> </span>
+					</div>
+				</div>
+		                    </li>
+		                </ul>
+		            </div>
+		            <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一个图文表格) -->
+		            <div class="mui-slider-item mui-slider-item-duplicate">
+		                <ul class="mui-table-view mui-grid-view">
+		                    <li class="mui-table-view-cell mui-media mui-col-xs-6" ><a href="#">
+		                    	<div class="mui-card-header mui-card-media" style="height:40vw;background-image:url(img/page4.jpg);padding: 0px;">
+					<div class="pics" style="padding: 10%;padding-top: 35%;">
+						<span class="text1" style="font-size:16px;">#分享烘焙幸福时刻#</span><br />
+						<span class="text2"> </span>
+					</div>
+				</div>
+		                    </li>
+		                    <li class="mui-table-view-cell mui-media mui-col-xs-6" ><a href="#">
+		                    	<div class="mui-card-header mui-card-media" style="height:40vw;background-image:url(img/page9.jpeg);padding: 0px;">
+					<div class="pics" style="padding: 10%;padding-top: 35%;">
+						<span class="text1" style="font-size:16px;">#晒晒你DIY烘焙吧#</span><br />
+						<span class="text2"> </span>
+					</div>
+				</div>
+		                    </li>
+		                </ul>
+		            </div>
+		        </div>
+		        
+		    </div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		
+	<script src="js/mui.zoom.js"></script>
+	<script src="js/mui.previewimage.js"></script>
+	<script>
+		mui.previewImage();
+	</script>
+	</body>
+
+</html>

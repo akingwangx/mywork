@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>入口页面</title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			body {
+				background-color: black;
+			}
+		</style>
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+			mui.plusReady(function() {
+				/**
+				 * 获取本地存储中launchFlag的值
+				 * http://www.html5plus.org/doc/zh_cn/storage.html#plus.storage.getItem
+				 * 若存在，说明不是首次启动，直接进入首页；
+				 * 若不存在，说明是首次启动，进入引导页；
+				 */
+				
+					mui.openWindow({
+						url: "guide.html",
+						id: "guide"
+					});
+				
+			});
+		</script>
+	</body>
+
+</html>

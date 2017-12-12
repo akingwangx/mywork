@@ -1,0 +1,67 @@
+.backgroud{
+			-webkit-filter:blur(5px) ;
+			filter: blur(5px);
+			position: relative;
+			width: 100%;
+			
+			
+		}
+		
+		.mui-btn {
+			border-radius: 50px;
+			height: 35px;
+			line-height: 5px;
+		}
+		
+		#reg,#forgetPassword{
+				color: white;
+			}
+			.spliter {
+				color: white;
+				padding: 0px 8px;
+			}
+			.link-area{
+				text-align: center;
+				
+			}
+			.mui-input-row label~input, .mui-input-row label~select, .mui-input-row label~textarea {
+    
+    font-size: 18px;
+}
+			.mui-input-group{
+				position: absolute;
+				margin-top: -350px;
+				margin-left: 40px;
+				color: white;
+			}
+			.logog img{
+				position: absolute;
+				margin-top: -550px;
+				margin-left: 146px;
+				width: 80px;
+				height:80px;
+				border-radius: 20px;
+			}
+			.logo1{
+				position: absolute;
+				margin-top: -450px;
+				margin-left: 140px;
+				color: whitesmoke;
+			}
+			#another{
+				color: whitesmoke;
+				position: absolute;
+				margin-top: -100px;
+				margin-left: -50px;
+			}
+			.link-area1{
+				color: whitesmoke;
+				position: absolute;
+				margin-top: -60px;
+				margin-left: 130px;
+			}
+			#back{
+				color: white;
+				position: absolute;
+				margin-top: -660px;
+				}

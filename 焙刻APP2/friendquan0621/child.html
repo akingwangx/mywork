@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/imageview.css"/>
+		<link rel="stylesheet" type="text/css" href="css/my.css" />
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.zoom.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.previewimage.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+
+		<div class="mui-content" >
+			<!--下拉刷新容器--><header class="mui-bar  mui-bar-nav bgco">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left mui-action-back"></a>
+	    <h1 class="mui-title">吃货圈</h1>
+	    <!--<div class="title-camera">
+	    	<a href="#picture"><span class="mui-icon mui-icon-camera mui-pull-right"></span></a></div>-->
+	     
+	</header>
+			<div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					
+					<!--数据列表-->
+					<div class="bgimg "><img src="imags/liulian1.jpg" /></div>
+					<div class="touxiang">
+						<a href="#picture"><img src="../img/44.jpg" /></a>
+					</div>
+
+					<div class="list">
+						<div class="list-p">
+							<img src="imags/touxiang2.jpg" /></div>
+						<div class="list-s mui-content-padded"><span>卖蛋糕咯</span>
+							<p>又是开心的一天！</p>
+							<img src="imags/222.jpg" class="mui-table-view" data-preview-src="" data-preview-group="1" />
+							<div class="list-f"><span>五分钟前</span>
+								<img src="imags/comments.png" id="cli">
+
+							</div>
+						</div>
+
+					</div>
+
+					<div class="list">
+						<div class="list-p">
+							<img src="imags/touxiang3.jpg" /></div>
+						<div class="list-s"><span>姚茜茜</span>
+							<p>又吃了一天~</p>
+							<img src="imags/index-3.jpg"class="mui-table-view" data-preview-src="" data-preview-group="1" />
+							<div class="list-f"><span>五分钟前</span>
+								<img src="imags/comments.png" />
+
+							</div>
+						</div>
+
+					</div>
+					
+					<div class="list">
+						<div class="list-p">
+							<img src="imags/touxiang.jpg" /></div>
+						<div class="list-s mui-content-padded"><span>王鑫</span>
+							<p>今天做的小蛋糕</p>
+							<img src="imags/index-1.jpg" class="mui-table-view" data-preview-src="" data-preview-group="1" />
+							<div class="list-f"><span>七分钟前</span>
+								<img src="imags/comments.png" id="cli">
+
+							</div>
+						</div>
+
+					</div>
+					
+					
+					
+					
+					
+					
+					
+
+				</div>
+			</div>
+			<div id="picture" class="mui-popover mui-popover-action mui-popover-bottom">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="#" id="takephoto">拍照</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#" id="photo">选取现有的</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="#picture"><b>取消</b></a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+		<script type="text/javascript">
+			mui.init({
+				pullRefresh: {
+					container: "#refreshContainer", //下拉刷新容器标识，querySelector能定位的css选择器均可，比如：id、.class等
+					down: {
+						height: 50, //可选,默认50.触发下拉刷新拖动距离,
+						contentdown: "下拉可以刷新", //可选，在下拉可刷新状态时，下拉刷新控件上显示的标题内容
+						contentover: "释放立即刷新", //可选，在释放可刷新状态时，下拉刷新控件上显示的标题内容
+						contentrefresh: "正在刷新...", //可选，正在刷新状态时，下拉刷新控件上显示的标题内容
+						callback: fn //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+					},
+					up: {
+						contentrefresh: "正在加载...", //可选，正在加载状态时，上拉加载控件上显示的标题内容
+						contentnomore: '没有更多数据了', //可选，请求完毕若没有更多数据时显示的提醒内容；
+						callback: fna //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+					}
+
+				}
+			});
+			 mui.previewImage();
+
+			function fn() {
+				setTimeout(function() {
+					mui('#refreshContainer').pullRefresh().endPulldownToRefresh();
+				}, 950)
+
+			}
+
+			function fna() {
+				this.endPullupToRefresh(true);
+
+			}
+			var btn = document.getElementById("takephoto");
+			btn.addEventListener("tap", function() {
+				var cmr = plus.camera.getCamera();
+				cmr.captureImage(function(p) {
+					//成功
+					plus.io.resolveLocalFileSystemURL(p, function(entry) {
+
+						var img_name = entry.name; //获得图片名称
+						var img_path = entry.toLocalURL(); //获得图片路径
+
+					}, function(e) {
+						console.log("读取拍照文件错误：" + e.message);
+					});
+
+				}, function(e) {
+					console.log("失败：" + e.message);
+				}, {
+					filename: '_doc/camera/',
+					index: 1
+				}); //  “_doc/camera/“  为保存文件名
+			})
+
+			var btn2 = document.getElementById("photo");
+			btn2.addEventListener("tap", function() {
+				plus.gallery.pick(function(path) {
+
+					img.src = path; //获得图片路径
+
+				}, function(e) {
+					console.log("取消选择图片");
+				}, {
+					filter: "image"
+				});
+			})
+
+			
+			
+			
+			
+			
+			
+			
+		</script>
+
+	</body>
+
+</html>

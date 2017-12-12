@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/imageview.css"/>
+		<link rel="stylesheet" type="text/css" href="css/star.css" />
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.zoom.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.previewimage.js" type="text/javascript" charset="utf-8"></script>
+		
+		
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<header class="mui-bar mui-bar-transparent">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"><span>返回</span></a>
+
+			</header>
+			<div class="pic">
+				<div class="bgimg"><img src="../img/11.jpg" /></div>
+				<div class="touxiang"><img src="../img/11.jpg" /></div>
+				<div class="sm-img"><img src=" imags/xx.png" /><img src="imags/lov1.png" id="img1" onclick="imgco()"/><img src="imags/hongxin.png" id="img2" onclick="imgco()"/></div>
+				<div class="na-span">
+					<p>林夕</p>
+					<span>抓住时间的尾巴，分享被宠溺的时光</span>
+				</div>
+				<div class="list-thr">
+					<ul>
+						<li>
+							<p>动态</p><span>66</span></li>
+						<li>
+							<p>关注</p><span>49</span></li>
+						<li>
+							<p>粉丝</p><span id="span1">364</span></li>
+
+					</ul>
+				</div>
+			</div>
+
+			<div class="photo">
+				<ul class="mui-table-view">
+					<li class="li1"><img src="imags/q1.jpeg"data-preview-src="" data-preview-group="1"/></li>
+					<li class="li3"><img src="imags/q3.jpeg"data-preview-src="" data-preview-group="1"/></li>
+					<li class="li6"><img src="imags/q6.jpeg"data-preview-src="" data-preview-group="1"/></li>
+					<li class="li7"><img src="imags/q7.jpeg"data-preview-src="" data-preview-group="1"/></li>
+					<li class="li5"><img src="imags/q5.jpeg"data-preview-src="" data-preview-group="1"/></li>
+					<li class="li8"><img src="imags/q8.jpeg"data-preview-src="" data-preview-group="1"/></li>
+					<li class="li9"><img src="imags/q9.jpeg"data-preview-src="" data-preview-group="1"/></li>
+					<li class="li2"><img src="imags/q2.jpeg"data-preview-src="" data-preview-group="1"/></li>
+					<li class="li4"><img src="imags/q4.jpeg"data-preview-src="" data-preview-group="1"/></li>
+
+				</ul>
+			</div>
+
+		</div>
+
+		<script type="text/javascript">
+			mui.init(
+				mui('.mui-bar-transparent').transparent({
+					top: 9999,
+					offset: 1500,
+					duration: 16,
+					scrollby: document.querySelector('.mui-scroll-wrapper')
+				})
+				
+				
+			);
+             mui.previewImage();
+             
+             var img1=document.getElementById("img1");
+             var img2=document.getElementById("img2");
+             var span1=document.getElementById("span1")
+             function imgco(){
+             	if(img1.style.display=="block"){
+             		 img1.style.display="none";
+             		 img2.style.display="block";
+             		 span1.innerHTML="365";
+             		 
+             	}else{img2.style.display="none"
+             	img1.style.display="block";
+             	span1.innerHTML="364";
+             	}
+            
+           
+             	
+             	
+             }
+ 			
+		</script>
+		
+	</body>
+
+</html>
